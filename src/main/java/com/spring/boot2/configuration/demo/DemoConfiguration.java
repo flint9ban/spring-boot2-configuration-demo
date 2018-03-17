@@ -5,6 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 import java.time.Duration;
+import java.util.List;
 
 @Data
 @Configuration
@@ -12,4 +13,6 @@ import java.time.Duration;
 public class DemoConfiguration {
 
     private Duration duration;
+
+    private List<String> array;
 }

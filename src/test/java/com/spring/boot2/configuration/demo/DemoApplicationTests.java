@@ -17,11 +17,17 @@ public class DemoApplicationTests {
 	@Autowired
 	DemoConfiguration demoConfiguration;
 
-	@Test
 	public void testDuration() {
 		Instant startTime = Instant.now();
 		Instant endTime = startTime.plus(demoConfiguration.getDuration());
 		assertThat(Duration.between(startTime,endTime)).isEqualTo(Duration.ofDays(5));
 	}
 
+	@Test
+	public void testArray(){
+		assertThat(demoConfiguration.getArray().size()).isEqualTo(3);
+		assertThat(demoConfiguration.getArray().get(0)).isEqualTo("zero");
+		assertThat(demoConfiguration.getArray().get(1)).isEqualTo("one");
+		assertThat(demoConfiguration.getArray().get(2)).isEqualTo("two");
+	}
 }
