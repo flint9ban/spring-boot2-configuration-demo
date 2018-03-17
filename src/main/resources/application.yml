@@ -1,0 +1,8 @@
+spring.demo.duration: 5d
+
+spring:
+  demo:
+    array:
+      - zero
+      - one
+      - two
